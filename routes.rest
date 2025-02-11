@@ -1,0 +1,102 @@
+// Local host 
+### GET all contacts
+GET http://localhost:3000/users
+
+
+### GET contact by id
+GET http://localhost:3000/users/67a78271cd740edaeaf73900
+
+
+### Post contacts by id
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "Lourdes@gmail.com",
+    "Username": "LourdesUser",
+    "FirstName": "Lourdes",
+    "LastName": "Ojerio",
+    "Job": "House wife",
+    "Status": "None",
+    "Country": "Philippines"
+}
+
+
+### Put / update contacts by id
+PUT http://localhost:3000/users/67aac2991465f758c7d33da1
+Content-Type: application/json
+
+{
+    "email": "Lourdes@gmail.com",
+    "Username": "LourdesUser",
+    "FirstName": "Lourdes",
+    "LastName": "Ojerio",
+    "Job": "House wife",
+    "Status": "Regular",
+    "Country": "Philippines"
+}
+
+
+### Delete contacts by id
+DELETE http://localhost:3000/users/67aabdb1e622a5ce55d69fd0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// production host 
+### GET all contacts
+GET https://cse-341-project2-30g3.onrender.com/users
+
+
+### GET contact by id
+GET https://cse-341-project2-30g3.onrender.com/users/67a78271cd740edaeaf73900
+
+
+### Post contacts by id
+POST https://cse-341-project2-30g3.onrender.com/users
+Content-Type: application/json
+
+{
+    "Email": "Owel@gmail.com",
+    "Username": "OwelsUser",
+    "FirstName": "Owel",
+    "LastName": "Gulay",
+    "Job": "Nurse Aide",
+    "Status": "None",
+    "Country": "Philippines"
+}
+
+
+### Put / update contacts by id
+PUT https://cse-341-project2-30g3.onrender.com/users/67aab681294afe3eb2b766a8
+Content-Type: application/json
+
+{
+    "email": "Jaggs@gmail.com",
+    "Username": "JaggsUser",
+    "FirstName": "Jaggs",
+    "LastName": "Ojerio",
+    "Job": "Nurse",
+    "Status": "Regular",
+    "Country": "Philippines"
+}
+
+
+### Delete contacts by id
+DELETE https://cse-341-project2-30g3.onrender.com/users/67aab5f16d65942d3bb00c96
