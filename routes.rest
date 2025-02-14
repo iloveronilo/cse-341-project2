@@ -73,7 +73,7 @@ POST https://cse-341-project2-30g3.onrender.com/users
 Content-Type: application/json
 
 {
-    "Email": "Owel@gmail.com",
+    "email": "Owel@gmail.com",
     "Username": "OwelsUser",
     "FirstName": "Owel",
     "LastName": "Gulay",
@@ -84,19 +84,19 @@ Content-Type: application/json
 
 
 ### Put / update contacts by id
-PUT https://cse-341-project2-30g3.onrender.com/users/67aab681294afe3eb2b766a8
+PUT https://cse-341-project2-30g3.onrender.com/users/67ab8e4e3b76a732a7406932
 Content-Type: application/json
 
 {
-    "email": "Jaggs@gmail.com",
-    "Username": "JaggsUser",
-    "FirstName": "Jaggs",
-    "LastName": "Ojerio",
-    "Job": "Nurse",
-    "Status": "Regular",
+    "email": "Owel@gmail.com",
+    "Username": "OwelsUser",
+    "FirstName": "Owel",
+    "LastName": "Gulay",
+    "Job": "Nurse Aide",
+    "Status": "None",
     "Country": "Philippines"
 }
 
 
 ### Delete contacts by id
-DELETE https://cse-341-project2-30g3.onrender.com/users/67aab5f16d65942d3bb00c96
+DELETE https://cse-341-project2-30g3.onrender.com/users/67ab8e4e3b76a732a7406932
