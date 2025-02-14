@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const mongodb = require('./data/database');
 const MongoStore = require('connect-mongo');
-const GitHubStrategy = require('passport-github2').Strategy;
 const passport = require('passport');
+const GitHubStrategy = require('passport-github2').Strategy;
 const session = require('express-session');
 const cors = require('cors');
 
@@ -32,16 +32,15 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
     .use('/', require('./routes/index.js'));
 
 
-    passport.use(new GitHubStrategy({
+    passport.use(new GitHubStrategy({   
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
         callbackURL: process.env.GITHUB_CALLBACK_URL
     },
-    function(accessToken, refreshToken, profile, done) {
+    (accessToken, refreshToken, profile, done) => {
         return done(null, profile);
-        // User.findOrCreate({ githubId: profile.id }, function (err, user) {
-        //   return done(err, user);
     }
+
 ));
 
 
