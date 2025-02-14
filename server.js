@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 const mongodb = require('./data/database');
 const MongoStore = require('connect-mongo');
 const GitHubStrategy = require('passport-github2').Strategy;
