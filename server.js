@@ -33,7 +33,7 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
 
 
     passport.use(new GitHubStrategy({   
-        clientID: process.env.GITHUB_CLEINT_ID,
+        clientID: 'v23liUeg9oKU9xKFU90',
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
         callbackURL: process.env.GITHUB_CALLBACK_URL
     },
@@ -41,10 +41,10 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
     (accessToken, refreshToken, profile, done) => {
         return done(null, profile);
     }
-
+    
 ));
 
-console.log("This client ID: ", clientID);
+console.log("This client ID: ", process.env.GITHUB_CLIENT_ID);
 
 passport.serializeUser((user, done) => {
     done(null, user);
