@@ -17,7 +17,7 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
         secret: "secret",
         resave: false,
         saveUninitialized: true,
-        store: MongoStore.create({ mongoUrl: process.env.MONGO_URL})
+        store: MongoStore.create({ mongoUrl: process.env.MONGODB_URL})
         }))
     .use(passport.initialize())  
     .use(passport.session())
