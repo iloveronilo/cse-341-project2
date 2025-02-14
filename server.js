@@ -33,16 +33,18 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
 
 
     passport.use(new GitHubStrategy({   
-        clientID: process.env.GITHUB_CLIENT_ID,
+        clientID: process.env.GITHUB_CLEINT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
         callbackURL: process.env.GITHUB_CALLBACK_URL
     },
+    
     (accessToken, refreshToken, profile, done) => {
         return done(null, profile);
     }
 
 ));
 
+console.log("This client ID: ", clientID);
 
 passport.serializeUser((user, done) => {
     done(null, user);
