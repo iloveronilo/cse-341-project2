@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const mongodb = require('./data/database');
+const MongoStore = require('connect-mongo');
 const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
@@ -15,7 +16,8 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
     .use(session({ 
         secret: "secret",
         resave: false,
-        saveUninitialized: true
+        saveUninitialized: true,
+        store: new (require('connect-mongo')(session))({ url: process.env.MONGO_URL})
         }))
     .use(passport.initialize())  
     .use(passport.session())
