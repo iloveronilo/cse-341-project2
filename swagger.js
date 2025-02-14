@@ -10,8 +10,8 @@ const doc = {
         title: "Users API",
         description: "users API",
     },
-    host: "localhost:3000",
-    schemes: ['http']
+    host: "cse-341-project2-30g3.onrender.com",
+    schemes: ['https']
 };
 
 const outputfile = './swagger.json';
