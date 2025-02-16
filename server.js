@@ -33,7 +33,7 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
 
 
     passport.use(new GitHubStrategy({   
-        clientID: process.env.GITHUB_CLIENT_ID,
+        clientID: 'Ov23liUeg9oKU9xKFU90',
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
         callbackURL: process.env.GITHUB_CALLBACK_URL
     },
