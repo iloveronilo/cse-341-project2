@@ -45,6 +45,8 @@ app.use(bodyParser.json()) // install body-parser 'npm i body-parser'
 ));
 
 console.log("This client ID: ", process.env.GITHUB_CLIENT_ID);
+console.log("This client secret: ", process.env.GITHUB_CLIENT_SECRET);
+console.log("Callback URL:", process.env.GITHUB_CALLBACK_URL);
 
 passport.serializeUser((user, done) => {
     done(null, user);
