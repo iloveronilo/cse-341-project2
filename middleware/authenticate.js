@@ -1,10 +1,14 @@
 const isAuthenticated = (req, res, next) => {
-    if(req.session.user === undefined) {
-        return res.status(401).json('You do not have access to this page');
+    try {
+        if(req.session.user === undefined) {
+            return res.status(401).json('You do not have access to this page');
+        }
+        next();
+    } catch (error) {
+        res.status(500).send('Error authenticating user', error);
     }
-    next();
+  
 };
-
 
 module.exports = { 
     isAuthenticated 

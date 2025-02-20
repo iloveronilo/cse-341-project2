@@ -1,8 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
-
 const MongoClient = require('mongodb').MongoClient;
-
 let database;
 
 const initDB = (callback) => {
@@ -24,11 +22,15 @@ const initDB = (callback) => {
 };
 
 const getDatabase = () => {
-    if (!database) {
-        throw new Error('Database is not connected');
+    try {
+            if (!database) {
+                throw new Error('Database is not connected');
+            }
+            return database;
+        } catch (error) {
+            console.log('Error getting database', error);
+        }   
     }
-    return database;
-};
 
 module.exports = {
     initDB,
